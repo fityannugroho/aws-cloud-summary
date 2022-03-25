@@ -165,7 +165,7 @@
 ## Jaringan Global
 
 - DNS: menerjemahkan nama domain ke alamat IP (Internet Protocol) \y \dp dibaca komputer.
-- Amazon Route 53: layanan DNS \y highly available (sangat tersedia) & scalable (\dp diskalakan).
+- Amazon Route 53: layanan DNS \y highly available (sangat tersedia) & scalable (\dp diskalakan) \u menghubungkan permintaan pelanggan ke infrastruktur \y berjalan di AWS ataupun ke infrastruktur \y berada di luar AWS.
 - Route 53 juga \dp mengarahkan traffic ke endpoints (titik akhir) \y berbeda menggunakan beberapa routing policies, \spt Geolocation DNS.
 - Geolocation DNS: mengarahkan traffic berdasarkan lokasi pelanggan.
 
@@ -214,7 +214,7 @@
 
 - Relational database management system (RDBMS): data memiliki relasi \dg bagian data lainnya.
 - RDS: layanan \u menjalankan database relasional di AWS Cloud. Mendukung: Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle DB, & Microsoft SQL Server.
-- Lift-and-Shift: proses memigrasikan beban kerja \dr on-premise ke AWS \dg sedikit / bahkan tanpa modifikasi.
+- Lift-&-Shift: proses memigrasikan beban kerja \dr on-premise ke AWS \dg sedikit / bahkan tanpa modifikasi.
 - Layanan Amazon RDS hadir \dg berbagai fitur, termasuk:
   - Automated patching (memperbaiki masalah \dg memperbarui program).
   - Backup (pencadangan).
@@ -271,7 +271,7 @@
 
 - Root user: pemilik akun AWS, memiliki permission \u mengakses & mengontrol seluruh sumber daya apa pun \dl akun \tsb, \spt menjalankan database, membuat EC2 instance, layanan blockchain, \dll.
 - Multi-factor authentication (MFA) \u root user.
-- AWS Identity and Access Management (AWS IAM): mengatur hak akses pengguna.
+- AWS Identity & Access Management (AWS IAM): mengatur hak akses pengguna.
 - Fitur-fitur IAM, \spt: IAM users, IAM policies, IAM groups, & IAM roles.
 - IAM users: mewakili orang (personal) \y berinteraksi \dg layanan & sumber daya AWS, \scr default belum memiliki permission sama sekali & \hr memberikan permission \scr eksplisit.
 - IAM policies: dokumen JSON \y mengizinkan / menolak aktivitas tertentu \thd layanan & sumber daya AWS.
@@ -294,8 +294,8 @@
 - Region \y Anda pilih \dp juga membantu memenuhi regulasi compliance.
 - [AWS Artifact](https://aws.amazon.com/id/artifact): layanan akses on-demand ke laporan keamanan & compliance AWS serta online agreements (perjanjian online) tertentu.
 - AWS Artifact Agreements: \u menandatangani perjanjian \dg AWS terkait penggunaan jenis informasi tertentu di seluruh layanan.
-- AWS Artifact Reports: menyediakan laporan compliance dari auditor pihak ketiga \y menguji & memverifikasi bahwa AWS mematuhi berbagai standar & regulasi keamanan global, regional, & industri.
-- Customer Compliance Center: menyediakan informasi \u mempelajari lebih lanjut tentang compliance. Anda \dp membaca beberapa \ct kasus \y berhubungan \dg compliance \dr para pelanggan AWS \u memberikan gambaran bagaimana perusahaan \dl regulated industry (industri teregulasi) menyelesaikan berbagai tantangan compliance, governance/tata kelola, & audit.
+- AWS Artifact Reports: menyediakan laporan compliance \dr auditor pihak ketiga \y menguji & memverifikasi bahwa AWS mematuhi berbagai standar & regulasi keamanan global, regional, & industri.
+- Customer Compliance Center: menyediakan informasi \u mempelajari \lb lanjut tentang compliance. Anda \dp membaca beberapa \ct kasus \y berhubungan \dg compliance \dr para pelanggan AWS \u memberikan gambaran bagaimana perusahaan \dl regulated industry (industri teregulasi) menyelesaikan berbagai tantangan compliance, governance/tata kelola, & audit.
 
 ## Serangan Denial-of-Service (DoS)
 
@@ -303,10 +303,10 @@
 - Distributed denial-of-service (DDoS): serangan DoS \y berasal \dr \byk sumber.
 - Tipe-tipe DDoS:
   - UDP flood: Penyerang mengirim permintaan ke penyedia lain \dg alamat penerima yaitu alamat infrastruktur Anda \shg server akan dibanjiri data \dr penyedia \tsb.
-  - HTTP level attack: Penyerang terlihat \spt pengguna normal, namun mengirim permintaan secara berulang kali & terus-menerus.
+  - HTTP level attack: Penyerang terlihat \spt pengguna normal, namun mengirim permintaan \scr berulang kali & terus-menerus.
   - Slowloris attack: Penyerang berpura-pura memiliki koneksi \y sangat lambat \shg server \shg \t \dp memproses permintaan pengguna \y lain.
 - Solusi UDP flood: menggunakan security group \y akan menolak permintaan jika memang \t ada di \dl daftar \y diizinkan.
-- Solusi slowloris attack: menggunakan ELB \u mengarahkan traffic lalu lintas ke EC2 instance. \u bisa membanjiri ELB, Anda harus membanjiri keseluruhan AWS Regions \y secara teoritis akan terlalu mahal bagi siapa pun \y melakukannya.
+- Solusi slowloris attack: menggunakan ELB \u mengarahkan traffic lalu lintas ke EC2 instance. \u bisa membanjiri ELB, Anda \hr membanjiri keseluruhan AWS Regions \y \scr teoritis akan terlalu mahal bagi siapa pun \y melakukannya.
 - AWS Shield: layanan proteksi \dr serangan DDoS.
 - AWS Shield Standard: otomatis melindungi sumber daya AWS \dr jenis serangan DDoS \y paling umum tanpa biaya.
 - AWS Shield Advanced: layanan berbayar \y menyediakan kemampuan \u mendiagnostik, mendeteksi, & memitigasi serangan DDoS \y canggih.
@@ -320,10 +320,10 @@
 - Kunci kriptografi: rangkaian angka acak \u mengunci (mengenkripsi) & membuka kunci (mendekripsi) data.
 - AWS WAF (web application firewall): melindungi aplikasi web / API \dr eksploitasi web umum menggunakan web access control list (web ACL), \spt gangguan keamanan, pemakaian sumber daya berlebih, atau gangguan ketersediaan.
 - Web ACL: daftar alamat IP \y diizinkan / diblokir request-nya.
-- Amazon Inspector: meningkatkan keamanan & compliance/kepatuhan aplikasi \dg menjalankan penilaian keamanan secara otomatis.
+- Amazon Inspector: meningkatkan keamanan & compliance/kepatuhan aplikasi \dg menjalankan penilaian keamanan \scr otomatis.
 - Amazon GuardDuty: layanan \y menyediakan deteksi ancaman cerdas \u infrastruktur & sumber daya AWS. Detail ancaman \y ditemukan \dp ditinjau \dr AWS Management Console.
 
-# Pemantauan & Analitik
+# 7. Pemantauan & Analitik
 
 ## Pengantar
 
@@ -332,9 +332,9 @@
 
 ## Amazon CloudWatch
 
-- CloudWatch: memantau infrastruktur & aplikasi secara real time. Cara kerja: melacak & memantau metrik.
+- CloudWatch: memantau infrastruktur & aplikasi \scr real time. Cara kerja: melacak & memantau metrik.
 - Metrik: variabel \y terikat \d sumber daya Anda, \spt penggunaan CPU \dr EC2 instance.
-- CloudWatch alarm: memberi peringatan jika suatu metrik mencapai batas yang ditentukan, & juga terintegrasi \dg [Amazon SNS](#messaging--queueing).
+- CloudWatch alarm: memberi peringatan jika suatu metrik mencapai batas \y ditentukan, & juga terintegrasi \dg [Amazon SNS](#messaging--queueing).
 - CloudWatch dashboard: panel \y mencantumkan metrik hampir \scr real time.
 - Keuntungan memakai CloudWatch:
   - Akses ke semua metrik \dr satu lokasi.
@@ -354,13 +354,13 @@
 
 - Trusted Advisor: layanan web \y memeriksa lingkungan AWS Anda & memberikan rekomendasi \scr real time sesuai \dg praktik terbaik AWS.
 - 3 kategori status:
-  - Centang hijau : menunjukkan jumlah item \y terdeteksi tanpa masalah.
-  - Segitiga oranye : mewakili jumlah saran \y mungkin perlu Anda investigasi.
-  - Lingkaran merah : mengindikasikan jumlah rekomendasi \y perlu Anda tindak lanjuti.
+  - Centang hijau : menunjukkan \jml item \y terdeteksi tanpa masalah.
+  - Segitiga oranye : mewakili \jml saran \y mungkin perlu Anda investigasi.
+  - Lingkaran merah : mengindikasikan \jml rekomendasi \y perlu Anda tindak lanjuti.
 - Trusted Advisor mengevaluasi sumber daya berdasarkan 5 pilar:
   - Cost optimization (pengoptimalan biaya)
     - \ct: RDS instances \y \t dipakai; Beberapa EC2 instance \y jarang digunakan; EBS volume \y \t dimanfaatkan.
-    - Solusi: scaling-down instance; menghapus sumber daya yang tidak digunakan.
+    - Solusi: scaling-down instance; menghapus sumber daya \y \t digunakan.
   - Performance (kinerja).
     - \ct: pengiriman konten \u Amazon CloudFront \y \t teroptimasi.
   - Security (keamanan).
@@ -370,18 +370,18 @@
   - Service limits (batas layanan): memberi peringatan saat Anda mendekati / mencapai batas layanan AWS.
     - \ct: limit \dr kepemilikan VPC per Region = 5.
 
-# Harga & Dukungan
+# 8. Harga & Dukungan
 
 ## AWS Free Tier
 
 - AWS Free Tier menyediakan 3 jenis penawaran:
   - Always free, \ct: AWS Lambda (1 juta request & 3,2 juta detik waktu komputasi per bulan); Amazon DynamoDB (25 GB penyimpanan per bulan).
   - 12 months free, \ct: Amazon S3 (S3 standard hingga 5 GB); Amazon EC2 (720 jam komputasi per bulan); Amazon CloudFront (50 GB \u transfer data keluar).
-  - Trials: lamanya waktu uji coba mungkin berbeda menurut jumlah hari / jumlah penggunaan \dl layanan, \ct: Amazon Inspector (90 hari uji coba); Amazon SNS; Amazon Cognito; dll.
+  - Trials: lamanya waktu uji coba mungkin berbeda menurut \jml hari / \jml penggunaan \dl layanan, \ct: Amazon Inspector (90 hari uji coba); Amazon SNS; Amazon Cognito; dll.
 
 ## Konsep Harga AWS
 
-- Pay for what you use: membayar sesuai \dg jumlah sumber daya \y digunakan, \t perlu komitmen jangka panjang.
+- Pay for what you use: membayar sesuai \dg \jml sumber daya \y digunakan, \t perlu komitmen jangka panjang.
 - Pay less when you reserve: Beberapa layanan menawarkan opsi reservasi \y memberikan diskon signifikan daripada harga instance \dg opsi penagihan On-Demand.
 - Pay less with volume-based discounts when you use more: biaya per unit akan semakin rendah jika semakin sering digunakan.
 - AWS pricing calculator: membuat estimasi biaya \u kasus penggunaan di AWS.
@@ -411,27 +411,27 @@
 ## AWS Support Plans
 
 - 4 support plan: basic, developer, bussiness, enterprise.
-- AWS Basic Support: setiap pelanggan otomatis mendapatkan paket AWS Basic Support gratis. Fungsi dukungan:
+- AWS **Basic** Support: setiap pelanggan otomatis mendapatkan paket AWS Basic Support gratis. Fungsi dukungan:
   - Akses 24/7 ke customer service.
   - Dokumentasi.
   - Whitepaper.
   - Forum dukungan.
   - AWS Trusted Advisor.
   - AWS Personal Health Dashboard
-- AWS Developer Support. Fitur:
+- AWS **Developer** Support. Fitur:
   - Semua fitur \y ada di Basic.
   - Layanan diagnostik \p sisi klien.
   - Panduan praktik terbaik.
   - Dukungan arsitektur dasar \y terdiri \dr panduan penggunaan penawaran, fitur, & layanan AWS.
   - Akses email ke customer support \dg waktu respons 24 jam \u segala pertanyaan.
-- AWS Business Support. Fitur:
+- AWS **Business** Support. Fitur:
   - Semua \y ada di Basic & Developer.
   - Seluruh rangkaian pemeriksaan AWS Trusted Advisor.
   - Akses telepon \lsg ke tim dukungan (cloud support engineer) \y memiliki SLA (service level agreement alias jaminan) respons 4 jam jika sistem produksi Anda mengalami gangguan & 1 jam jika sistem Anda down / \t bekerja.
   - Akses ke Infrastructure Event Management \d biaya tambahan. AWS \dp membantu Anda \u merencanakan acara besar, \spt peluncuran produk baru / periklanan global.
   - Panduan kasus penggunaan \u mengidentifikasi penawaran, fitur, & layanan AWS \y paling mendukung kebutuhan spesifik Anda.
   - Dukungan terbatas \u perangkat lunak pihak ketiga, \ct \dl proses instal, konfigurasi, & pemecahan masalah \p sistem operasi pihak ketiga.
-- AWS Enterprise Support. Fitur:
+- AWS **Enterprise** Support. Fitur:
   - Semua \y ada di Basic, Developer, & Bussiness.
   - SLA 15 menit.
   - Panduan arsitektur aplikasi: hubungan konsultatif \y \d mendukung kasus penggunaan & aplikasi spesifik Anda.
@@ -444,7 +444,7 @@
 - AWS Marketplace: katalog digital pilihan \y memiliki ribuan perangkat lunak \dr berbagai vendor.
 - Kategori produk AWS marketplace: Infrastructure Software, Business Applications, Data & Analytics, DevOps, dll.
 
-# Migrasi & Inovasi
+# 9. Migrasi & Inovasi
 
 ## AWS Cloud Adoption Framework (AWS CAF)
 
@@ -452,7 +452,7 @@
 - Framework \tsb membagi panduan menjadi 6 area \y disebut \d perspektif mencakup perspektif Business, People, & Governance berfokus \p kemampuan bisnis. Lalu, perspektif Platform, Security, & Operations berfokus \p kemampuan teknis.
 - **Business**: \u beralih \dr model bisnis \y memisahkan bisnis & IT ke model \y melibatkan IT.
   - Peran umum: Manajer bisnis, Manajer keuangan, Budget owners (pemilik anggaran), Strategy stakeholders.
-- **People**: mempersiapkan tim \dg memperbarui skill staf & proses organisasi untuk migrasi cloud, serta memprioritaskan pelatihan, kepegawaian, & perubahan organisasi.
+- **People**: mempersiapkan tim \dg memperbarui skill staf & proses organisasi \u migrasi cloud, serta memprioritaskan pelatihan, kepegawaian, & perubahan organisasi.
   - Peran umum: human resource, staf, manajer personalia.
 - **Governance** (Tata Kelola): berfokus \p mengintegrasikan IT Governance \dg Organizational Governance, juga memberikan panduan \u mengidentifikasi & menerapkan praktik terbaik \u IT Governance serta mendukung proses bisnis \dg teknologi.
   - Peran umum: CIO, manajer program, manajer proyek, analis bisnis, manajer portofolio.
@@ -467,8 +467,8 @@
 ## Strategi Migrasi
 
 - 6 kemungkinan opsi terkait strategi migrasi (6R):
-  - Rehosting: lift and shift (angkat dan pindahkan); Cukup pindahkan aplikasi Anda ke AWS. Bisa menghemat hingga 30% \dr total biaya walaupun \t ada pengoptimalan apa pun \p aplikasi.
-  - Replatforming: lift, tinker, and shift (angkat, perbaiki, dan pindahkan); \spt rehosting namun \dp melakukan beberapa pengoptimalan cloud.
+  - Rehosting: lift & shift (angkat dan pindahkan); Cukup pindahkan aplikasi Anda ke AWS. Bisa menghemat hingga 30% \dr total biaya walaupun \t ada pengoptimalan apa pun \p aplikasi.
+  - Replatforming: lift, tinker, & shift (angkat, perbaiki, dan pindahkan); \spt rehosting namun \dp melakukan beberapa pengoptimalan cloud.
   - Retiring: menghapus aplikasi \y \t \dibutuhkan.
   - Retaining: hanya memigrasikan aplikasi \y berguna \u bisnis. Jangan aplikasi \y akan segera dihentikan (deprecated).
   - Repurchasing: umum terjadi \p perusahaan \y ingin meninggalkan vendor perangkat lunak lama & memulai \y baru.
@@ -482,10 +482,10 @@
 - Cara mendapatkan Snowcone:
   - pesan melalui AWS Management Console;
   - AWS mengirimkannya kepada Anda;
-  - salin data ke perangkat tersebut; &
+  - salin data ke perangkat \tsb; &
   - kirimkan kembali kepada AWS.
   - Saat perangkat tiba di AWS Region, AWS akan menyalin data ke Amazon S3 bucket \y Anda miliki.
-- Snowball hadir dalam 2 versi: Snowball Edge Storage Optimized & Snowball Edge Compute Optimized.
+- Snowball hadir \dl 2 versi: Snowball Edge Storage Optimized & Snowball Edge Compute Optimized.
 - Snowball Edge Storage Optimized: HDD 80 TB; SSD 1 TB; vCPU 40 vCPU; memory 80 GB.
 - Snowball Edge Compute Optimized: HDD 42 TB; SSD 7,68 TB; vCPU 52 vCPU; memory 208 GB; GPU NVIDIA V100 (opsional).
 - Snowmobile: layanan transfer data \d skala exabyte \u memindahkan data hingga 100 PB (100.000 TB) ke AWS. Perangkat disimpan di \dlm kontainer pengiriman \y kokoh sepanjang 45 kaki & ditarik oleh truk semi-trailer.
@@ -493,7 +493,7 @@
   - AWS mengirimkan truk ke lokasi data center Anda.
   - Personel AWS akan menghubungkannya ke jaringan lokal Anda.
   - Kemudian, mulailah mentransfer data Anda ke Snowmobile.
-  - Snowmobile akan dibawa kembali ke AWS untuk diimpor ke Amazon S3.
+  - Snowmobile akan dibawa kembali ke AWS \u diimpor ke Amazon S3.
 - Semua perangkat Snow Family dirancang agar aman & tahan kerusakan saat berada di lokasi Anda / /dl perjalanan, serta terenkripsi \scr otomatis \dg encryption key (kunci enkripsi) 256-bit.
 
 ## Inovasi \d AWS
@@ -510,7 +510,7 @@
   - AWS DeepRacer: membuat ML manual; bereksperimen \d reinforcement learning.
 - AWS Ground Station: layanan satelit \d sistem pembayaran sesuai kebutuhan.
 
-# Perjalanan Cloud
+# 10. Perjalanan Cloud
 
 ## Pengantar
 
@@ -518,11 +518,11 @@
 - **Operational Excellence** (Keunggulan Operasional): berfokus \u menjalankan & memantau sistem guna memberikan nilai bisnis serta terus meningkatkan proses & prosedur; kemampuan \u menjalankan beban kerja \scr efektif, mendapatkan wawasan tentang operasi.
   - \ct: melakukan operation as code (operasi sebagai kode): membuat anotasi dokumentasi; mengantisipasi kegagalan; sering memperbaiki prosedur operasi.
 - **Security** (Keamanan): melindungi informasi, sistem, & aset Anda sekaligus memberikan nilai bisnis melalui risk assessment (penilaian risiko) & strategi mitigasi.
-  - \ct: menerapkan keamanan di semua lapisan arsitektur; melakukan automasi terhadap praktik terbaik keamanan; melindungi data in-transit & at rest.
+  - \ct: menerapkan keamanan di semua lapisan arsitektur; melakukan automasi \thd praktik terbaik keamanan; melindungi data in-transit & at rest.
 - **Reliability** (Keandalan): kemampuan sistem \u memastikan beban kerja melakukan fungsi \y diinginkan \dg benar & konsisten sesuai harapan.
   - \ct: pemulihan otomatis \dr kegagalan infrastruktur / layanan; horizontal scaling \u meningkatkan ketersediaan beban kerja; pengujian prosedur pemulihan.
-- **Performance Efficiency** (Efisiensi Kinerja): berfokus \p penggunaan sumber daya IT & komputasi \scr efisien \u memenuhi kebutuhan.
-  - \ct: menggunakan arsitektur serverless; melakukan eksperimen lebih sering; merancang sistem agar \dp mendunia \dl hitungan menit.
+- **Performance Efficiency** (Efisiensi Kinerja): berfokus \p penggunaan sumber daya IT & komputasi \scr efisien \u memenuhi kebutuhan sistem.
+  - \ct: menggunakan arsitektur serverless; melakukan eksperimen \lb sering; merancang sistem agar \dp mendunia \dl hitungan menit.
 - **Cost Optimization** (Pengoptimalan Biaya): berfokus \u mengontrol pengeluaran guna menghindari biaya \y \t perlu.
   - \ct: menerapkan manajemen keuangan cloud; menganalisis pengeluaran; menggunakan managed service (layanan terkelola) \u mengurangi biaya kepemilikan.
 - AWS Well-Architected Tool: alat Framework as a self-service (Framework/Kerangka kerja sebagai layanan mandiri).
@@ -535,30 +535,30 @@
   - Berhenti menebak kapasitas
   - Tingkatkan kecepatan & ketangkasan
   - Hentikan biaya pengelolaan & pemeliharaan data center
-  - Mendunia dalam hitungan menit
+  - Mendunia \dl hitungan menit
 
-# Dasar-dasar AWS Certified Cloud Practitioner (AWS CP)
+# 11. Dasar-dasar AWS Certified Cloud Practitioner (AWS CP)
 
 ## Domain Ujian
 
 - 4 domain ujian:
   - Cloud Concepts (Konsep Cloud): kemunculan = 26%
-  - Security and Compliance (Keamanan dan Kepatuhan): kemunculan = 25%
+  - Security & Compliance (Keamanan dan Kepatuhan): kemunculan = 25%
   - Technology (Teknologi): kemunculan = 33%
-  - Billing and Pricing (Penagihan dan Penetapan Harga): kemunculan = 16%
+  - Billing & Pricing (Penagihan dan Penetapan Harga): kemunculan = 16%
   - *persentase kemunculan \tsb \a perkiraan.
 - AWS menyarankan agar Anda memiliki setidaknya 6 bulan pengalaman \d AWS Cloud \dl peran apa pun, termasuk: Manajer proyek, Manajer IT, Manajer penjualan, Decision makers (pembuat keputusan), Pemasaran.
 - Ujian terdiri \dr 65 pertanyaan \y \hr diselesaikan \dl waktu 90 menit. \u lulus, \hr mendapatkan nilai minimal 70%.
 - 2 jenis pertanyaan:
   - Multiple choice (pilihan ganda): Jenis ini memiliki 1 jawaban benar & 3 jawaban salah.
-  - Multiple response (jawaban ganda): Jenis ini memiliki 2 / lebih jawaban benar \dr 5 / \lb pilihan.
+  - Multiple response (jawaban ganda): Jenis ini memiliki 2 / \lb jawaban benar \dr 5 / \lb pilihan.
   - Setiap pertanyaan \y \t dijawab akan dianggap salah.
 
 ## Strategi Ujian
 
-- Baca pertanyaan secara lengkap
+- Baca pertanyaan \scr lengkap
 - Prediksikan jawabannya sebelum meninjau pilihan jawaban
-- Hilangkan opsi jawaban yang salah
+- Hilangkan opsi jawaban \y salah
 
 # Singkatan
 
