@@ -537,6 +537,29 @@
   - Hentikan biaya pengelolaan & pemeliharaan data center
   - Mendunia dalam hitungan menit
 
+# Dasar-dasar AWS Certified Cloud Practitioner (AWS CP)
+
+## Domain Ujian
+
+- 4 domain ujian:
+  - Cloud Concepts (Konsep Cloud): kemunculan = 26%
+  - Security and Compliance (Keamanan dan Kepatuhan): kemunculan = 25%
+  - Technology (Teknologi): kemunculan = 33%
+  - Billing and Pricing (Penagihan dan Penetapan Harga): kemunculan = 16%
+  - *persentase kemunculan \tsb \a perkiraan.
+- AWS menyarankan agar Anda memiliki setidaknya 6 bulan pengalaman \d AWS Cloud \dl peran apa pun, termasuk: Manajer proyek, Manajer IT, Manajer penjualan, Decision makers (pembuat keputusan), Pemasaran.
+- Ujian terdiri \dr 65 pertanyaan \y \hr diselesaikan \dl waktu 90 menit. \u lulus, \hr mendapatkan nilai minimal 70%.
+- 2 jenis pertanyaan:
+  - Multiple choice (pilihan ganda): Jenis ini memiliki 1 jawaban benar & 3 jawaban salah.
+  - Multiple response (jawaban ganda): Jenis ini memiliki 2 / lebih jawaban benar \dr 5 / \lb pilihan.
+  - Setiap pertanyaan \y \t dijawab akan dianggap salah.
+
+## Strategi Ujian
+
+- Baca pertanyaan secara lengkap
+- Prediksikan jawabannya sebelum meninjau pilihan jawaban
+- Hilangkan opsi jawaban yang salah
+
 # Singkatan
 
 - \a: adalah
