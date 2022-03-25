@@ -134,7 +134,7 @@
 - high-level API: memberikan \lb \byk fungsi \dl 1 perintah & \lb mudah digunakan.
 - AWS Elastic Beanstalk: membantu menyediakan lingkungan berbasis Amazon EC2. Cukup unggah kode & tentukan konfigurasi \y diinginkan, maka pembangunan lingkungan \spt penyesuaian kapasitas, load balancing, auto-scaling, & pemantauan kesehatan aplikasi akan otomatis dikerjakan.
 - AWS CloudFormation: layanan infrastructure as code (IaaS, infrastruktur sebagai kode) \u menentukan berbagai sumber daya AWS \dg cara deklaratif menggunakan CloudFormation template (dokumen berbasis JSON / YAML).
-- CloudFormation template\dp dijalankan di beberapa akun / region.
+- CloudFormation template \dp dijalankan di beberapa akun / region.
 
 # 4. Jaringan
 
