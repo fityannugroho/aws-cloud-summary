@@ -365,7 +365,7 @@
     - \ct: pengiriman konten \u Amazon CloudFront \y \t teroptimasi.
   - Security (keamanan).
     - \ct: IAM password policy \y lemah \u user; MFA \t diaktifkan \u root user; security group \y mengizinkan akses publik ke EC2 instance.
-  - Fault tolerance (toleransi terhadap kesalahan)
+  - Fault tolerance (toleransi \thd kesalahan)
     - \ct: EBS volume \y \t memiliki snapshot (backup); EC2 \y \t terdistribusi ke seluruh AZ.
   - Service limits (batas layanan): memberi peringatan saat Anda mendekati / mencapai batas layanan AWS.
     - \ct: limit \dr kepemilikan VPC per Region = 5.
@@ -437,7 +437,7 @@
   - Panduan arsitektur aplikasi: hubungan konsultatif \y \d mendukung kasus penggunaan & aplikasi spesifik Anda.
   - Infrastructure Event Management.
   - Technical Account Manager (TAM) \y akan mengoordinasikan akses ke program & pakar AWS lainnya sesuai kebutuhan. Juga menyediakan infrastructure event management, tinjauan Well-Architected, & reviu operasional.
-- Tinjauan Well-Architected: TAM bekerja sama \dg pelanggan \u meninjau arsitektur menggunakan Well-Architected Framework berdasarkan 5 pilar: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization.
+- Tinjauan Well-Architected: TAM bekerja sama \dg pelanggan \u meninjau arsitektur menggunakan Well-Architected Framework.
 
 ## AWS Marketplace
 
@@ -509,6 +509,33 @@
   - Amazon SageMaker: membangun, melatih, & menerapkan model machine learning \dl skala besar \scr cepat; serta membangun model khusus \d dukungan semua open-source framework populer.
   - AWS DeepRacer: membuat ML manual; bereksperimen \d reinforcement learning.
 - AWS Ground Station: layanan satelit \d sistem pembayaran sesuai kebutuhan.
+
+# Perjalanan Cloud
+
+## Pengantar
+
+- AWS Well-Architected Framework: layanan \u mengevaluasi arsitektur \y Anda bangun \thd keunggulan \y berdasarkan 5 pilar: Operational Excellence, Security, Reliability, Performance Efficiency, & Cost Optimization.
+- **Operational Excellence** (Keunggulan Operasional): berfokus \u menjalankan & memantau sistem guna memberikan nilai bisnis serta terus meningkatkan proses & prosedur; kemampuan \u menjalankan beban kerja \scr efektif, mendapatkan wawasan tentang operasi.
+  - \ct: melakukan operation as code (operasi sebagai kode): membuat anotasi dokumentasi; mengantisipasi kegagalan; sering memperbaiki prosedur operasi.
+- **Security** (Keamanan): melindungi informasi, sistem, & aset Anda sekaligus memberikan nilai bisnis melalui risk assessment (penilaian risiko) & strategi mitigasi.
+  - \ct: menerapkan keamanan di semua lapisan arsitektur; melakukan automasi terhadap praktik terbaik keamanan; melindungi data in-transit & at rest.
+- **Reliability** (Keandalan): kemampuan sistem \u memastikan beban kerja melakukan fungsi \y diinginkan \dg benar & konsisten sesuai harapan.
+  - \ct: pemulihan otomatis \dr kegagalan infrastruktur / layanan; horizontal scaling \u meningkatkan ketersediaan beban kerja; pengujian prosedur pemulihan.
+- **Performance Efficiency** (Efisiensi Kinerja): berfokus \p penggunaan sumber daya IT & komputasi \scr efisien \u memenuhi kebutuhan.
+  - \ct: menggunakan arsitektur serverless; melakukan eksperimen lebih sering; merancang sistem agar \dp mendunia \dl hitungan menit.
+- **Cost Optimization** (Pengoptimalan Biaya): berfokus \u mengontrol pengeluaran guna menghindari biaya \y \t perlu.
+  - \ct: menerapkan manajemen keuangan cloud; menganalisis pengeluaran; menggunakan managed service (layanan terkelola) \u mengurangi biaya kepemilikan.
+- AWS Well-Architected Tool: alat Framework as a self-service (Framework/Kerangka kerja sebagai layanan mandiri).
+
+## Manfaat AWS Cloud
+
+- Enam manfaat utama menggunakan AWS Cloud:
+  - Ubah pengeluaran di muka menjadi pengeluaran variabel
+  - Manfaatkan skala ekonomi \y masif
+  - Berhenti menebak kapasitas
+  - Tingkatkan kecepatan & ketangkasan
+  - Hentikan biaya pengelolaan & pemeliharaan data center
+  - Mendunia dalam hitungan menit
 
 # Singkatan
 
