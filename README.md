@@ -285,7 +285,7 @@
 - Fitur AWS Organizations:
   - Manajemen terpusat.
   - Consolidated billing (Tagihan terkonsolidasi).
-  - Pengelompokan hierarki akun: kelompokkan ke \dlm organiztional unit (OU) \y memiliki tujuan serupa. Terapkan policy (kebijakan) ke OU, maka semua akun akan mewarisi permission \dr policy \tsb.
+  - Pengelompokan hierarki akun: kelompokkan ke \dl organiztional unit (OU) \y memiliki tujuan serupa. Terapkan policy (kebijakan) ke OU, maka semua akun akan mewarisi permission \dr policy \tsb.
   - Kontrol atas layanan AWS & tindakan API.
 
 ## Compliance (Kepatuhan)
@@ -313,7 +313,7 @@
 
 ## Layanan Keamanan Tambahan
 
-- Di AWS, enkripsi hadir \dl 2 varian: at rest (saat diam) & in-transit (\dlm perjalanan).
+- Di AWS, enkripsi hadir \dl 2 varian: at rest (saat diam) & in-transit (\dl perjalanan).
 - Encryption at rest: proses enkripsi saat data \t bergerak. \ct: server-side encryption at rest \u semua data di tabel DynamoDB. Data \y tersimpan akan berubah menjadi serangkaian kata \y \t terbaca.
 - Encryption in-transit: proses enkripsi saat data berpindah antar layanan AWS / pun klien. \ct: menggunakan koneksi (secure sockets layer) SSL.
 - AWS Key Management Service (AWS KMS): layanan \ u melakukan enkripsi menggunakan cryptographic key (kunci kriptografi).
@@ -443,6 +443,72 @@
 
 - AWS Marketplace: katalog digital pilihan \y memiliki ribuan perangkat lunak \dr berbagai vendor.
 - Kategori produk AWS marketplace: Infrastructure Software, Business Applications, Data & Analytics, DevOps, dll.
+
+# Migrasi & Inovasi
+
+## AWS Cloud Adoption Framework (AWS CAF)
+
+- AWS CAF: \u memberikan Anda panduan agar proses migrasi ke AWS menjadi \lb cepat & lancar.
+- Framework \tsb membagi panduan menjadi 6 area \y disebut \d perspektif mencakup perspektif Business, People, & Governance berfokus \p kemampuan bisnis. Lalu, perspektif Platform, Security, & Operations berfokus \p kemampuan teknis.
+- **Business**: \u beralih \dr model bisnis \y memisahkan bisnis & IT ke model \y melibatkan IT.
+  - Peran umum: Manajer bisnis, Manajer keuangan, Budget owners (pemilik anggaran), Strategy stakeholders.
+- **People**: mempersiapkan tim \dg memperbarui skill staf & proses organisasi untuk migrasi cloud, serta memprioritaskan pelatihan, kepegawaian, & perubahan organisasi.
+  - Peran umum: human resource, staf, manajer personalia.
+- **Governance** (Tata Kelola): berfokus \p mengintegrasikan IT Governance \dg Organizational Governance, juga memberikan panduan \u mengidentifikasi & menerapkan praktik terbaik \u IT Governance serta mendukung proses bisnis \dg teknologi.
+  - Peran umum: CIO, manajer program, manajer proyek, analis bisnis, manajer portofolio.
+- **Platform**: merancang, menerapkan, & mengoptimalkan arsitektur teknologi AWS berdasarkan sasaran bisnis, juga memberikan panduan strategis \u desain, prinsip, layanan, & kebijakan \u menentukan infrastruktur AWS.
+  - Peran umum: CTO, manajer IT, arsitek cloud.
+- **Security**: memastikan organisasi/perusahaan memenuhi tujuan keamanan \u visibilitas, kemampuan audit, kontrol, & ketangkasan (agility).
+  - Peran umum: CISO (Chief Information Security Officer), Manajer keamanan IT, Analisis keamanan IT.
+- **Operations** (operasi): mengaktifkan, menjalankan, menggunakan, mengoperasikan, & memulihkan beban kerja IT ke tingkat \y disepakati \d business stakeholder.
+  - Peran umum: IT Operations Manager, IT Support Manager.
+- AWS CAF Action Plan: \u memandu proses migrasi, \spt manajemen perubahan organisasi \p perjalanan cloud Anda.
+
+## Strategi Migrasi
+
+- 6 kemungkinan opsi terkait strategi migrasi (6R):
+  - Rehosting: lift and shift (angkat dan pindahkan); Cukup pindahkan aplikasi Anda ke AWS. Bisa menghemat hingga 30% \dr total biaya walaupun \t ada pengoptimalan apa pun \p aplikasi.
+  - Replatforming: lift, tinker, and shift (angkat, perbaiki, dan pindahkan); \spt rehosting namun \dp melakukan beberapa pengoptimalan cloud.
+  - Retiring: menghapus aplikasi \y \t \dibutuhkan.
+  - Retaining: hanya memigrasikan aplikasi \y berguna \u bisnis. Jangan aplikasi \y akan segera dihentikan (deprecated).
+  - Repurchasing: umum terjadi \p perusahaan \y ingin meninggalkan vendor perangkat lunak lama & memulai \y baru.
+  - Refactoring/re-architecting: menulis kode \y baru, & akan menimbulkan biaya awal \y paling tinggi \dl hal perencanaan & usaha migrasi.
+
+## AWS Snow Family
+
+- Snow Family: kumpulan perangkat fisik \u memindahkan data sampai \dg ukuran exabyte ke \dl & keluar AWS.
+- Snow Family terdiri \dr AWS Snowcone, AWS Snowball, & AWS Snowmobile.
+- Snowcone: perangkat \y kecil, kokoh, aman & \dp menampung data sampai \dg 8 TB (terabyte) & berisi edge computing (sistem komputasi \y \dp melakukan pemrosesan & analisis data sedekat mungkin ke lokasi \y dibutuhkan).
+- Cara mendapatkan Snowcone:
+  - pesan melalui AWS Management Console;
+  - AWS mengirimkannya kepada Anda;
+  - salin data ke perangkat tersebut; &
+  - kirimkan kembali kepada AWS.
+  - Saat perangkat tiba di AWS Region, AWS akan menyalin data ke Amazon S3 bucket \y Anda miliki.
+- Snowball hadir dalam 2 versi: Snowball Edge Storage Optimized & Snowball Edge Compute Optimized.
+- Snowball Edge Storage Optimized: HDD 80 TB; SSD 1 TB; vCPU 40 vCPU; memory 80 GB.
+- Snowball Edge Compute Optimized: HDD 42 TB; SSD 7,68 TB; vCPU 52 vCPU; memory 208 GB; GPU NVIDIA V100 (opsional).
+- Snowmobile: layanan transfer data \d skala exabyte \u memindahkan data hingga 100 PB (100.000 TB) ke AWS. Perangkat disimpan di \dlm kontainer pengiriman \y kokoh sepanjang 45 kaki & ditarik oleh truk semi-trailer.
+- Cara kerja Snowmobile:
+  - AWS mengirimkan truk ke lokasi data center Anda.
+  - Personel AWS akan menghubungkannya ke jaringan lokal Anda.
+  - Kemudian, mulailah mentransfer data Anda ke Snowmobile.
+  - Snowmobile akan dibawa kembali ke AWS untuk diimpor ke Amazon S3.
+- Semua perangkat Snow Family dirancang agar aman & tahan kerusakan saat berada di lokasi Anda / /dl perjalanan, serta terenkripsi \scr otomatis \dg encryption key (kunci enkripsi) 256-bit.
+
+## Inovasi \d AWS
+
+- Serverless applications: AWS Lambda
+- Artificial Intelligence (AI):
+  - Amazon Transcribe: Layanan speech-to-text (mengubah ucapan menjadi teks) \scr otomatis.
+  - Amazon Comprehend: Layanan NLP (Natural Language Processing/pemrosesan bahasa alami) \u mencari insight (wawasan) & hubungan \dlm teks.
+  - Amazon Fraud Detector: Layanan \u mengidentifikasi aktivitas online \y berpotensi penipuan.
+  - Amazon Lex: Layanan solusi AI siap pakai \u membangun chatbot interaktif.
+  - Amazon Textract: Layanan \y \dp membaca & memproses teks, tulisan tangan, form, tabel, & data lainnya \scr otomatis \dr jutaan halaman dokumen \dl hitungan jam.
+- Machine learning (ML):
+  - Amazon SageMaker: membangun, melatih, & menerapkan model machine learning \dl skala besar \scr cepat; serta membangun model khusus \d dukungan semua open-source framework populer.
+  - AWS DeepRacer: membuat ML manual; bereksperimen \d reinforcement learning.
+- AWS Ground Station: layanan satelit \d sistem pembayaran sesuai kebutuhan.
 
 # Singkatan
 
