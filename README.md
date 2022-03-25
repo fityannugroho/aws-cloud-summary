@@ -82,7 +82,7 @@
   - menyiapkan scaling.
   - merancang aplikasi \u dijalankan agar high available.
 - Serverless: pengguna \t \dp melihat & mengakses infrastruktur dasar \y menjalankan aplikasi. Semua pengelolaan lingkungan \y mendasari penyediaan, scaling, high availability, & pemeliharaan sudah ditangani \shg pengguna \dp fokus \p aplikasi \y akan dijalankan.
-- AWS lambda: layanan serverless AWS.
+- AWS Lambda: layanan serverless AWS.
 - AWS Lambda dirancang \u menjalankan kode di bawah 15 menit \shg tdk cocok \u proses \y berjalan lama \spt deep learning.
 - Container: \u efisiensi & portabilitas.
 -  Amazon Elastic Container Service (Amazon ECS) & Amazon Elastic Kubernetes Service (Amazon EKS). Keduanya \a container orchestration.
@@ -370,6 +370,80 @@
   - Service limits (batas layanan): memberi peringatan saat Anda mendekati / mencapai batas layanan AWS.
     - \ct: limit \dr kepemilikan VPC per Region = 5.
 
+# Harga & Dukungan
+
+## AWS Free Tier
+
+- AWS Free Tier menyediakan 3 jenis penawaran:
+  - Always free, \ct: AWS Lambda (1 juta request & 3,2 juta detik waktu komputasi per bulan); Amazon DynamoDB (25 GB penyimpanan per bulan).
+  - 12 months free, \ct: Amazon S3 (S3 standard hingga 5 GB); Amazon EC2 (720 jam komputasi per bulan); Amazon CloudFront (50 GB \u transfer data keluar).
+  - Trials: lamanya waktu uji coba mungkin berbeda menurut jumlah hari / jumlah penggunaan \dl layanan, \ct: Amazon Inspector (90 hari uji coba); Amazon SNS; Amazon Cognito; dll.
+
+## Konsep Harga AWS
+
+- Pay for what you use: membayar sesuai \dg jumlah sumber daya \y digunakan, \t perlu komitmen jangka panjang.
+- Pay less when you reserve: Beberapa layanan menawarkan opsi reservasi \y memberikan diskon signifikan daripada harga instance \dg opsi penagihan On-Demand.
+- Pay less with volume-based discounts when you use more: biaya per unit akan semakin rendah jika semakin sering digunakan.
+- AWS pricing calculator: membuat estimasi biaya \u kasus penggunaan di AWS.
+- Manfaat:
+  - Memodelkan arsitektur \y diinginkan sebelum membangunnya.
+  - Menelusuri setiap harga sekaligus membuat perhitungan.
+  - Menemukan tipe instance \y tersedia beserta persyaratan kontrak \y \dp memenuhi kebutuhan Anda.
+
+## Billing Dashboard
+
+- AWS Billing & Cost Management dashboard: layanan \u melihat informasi penagihan, membayar tagihan AWS, memantau penggunaan, menganalisis, & mengontrol biaya.
+
+## Consolidated Billing
+
+- Consolidated billing: fitur gratis \u mendapatkan 1 tagihan \u semua akun AWS \y ada di organis asi.
+- Manfaat lain: \dp mendistribusikan bulk discount pricing (harga diskon massal), Savings Plans, & Reserved Instances di seluruh akun \p organisasi Anda.
+
+## AWS Budget
+
+- AWS Budgets: \u menetapkan anggaran \p berbagai skenario, \spt biaya / penggunaan layanan. Bahkan bisa mengirimkan notifikasi saat penggunaan Anda sudah melebihi \jml batas anggaran.
+
+## AWS Cost Explorer
+
+- Cost Explorer: layanan berbasis konsol \y \dp meninjau & menganalisis \scr visual pengeluaran Anda di AWS.
+- Pengeluaran \dp divisualisasikan & dikelompokkan berdasarkan beberapa atribut: layanan, AWS Regions, tipe instance, tag, dll.
+
+## AWS Support Plans
+
+- 4 support plan: basic, developer, bussiness, enterprise.
+- AWS Basic Support: setiap pelanggan otomatis mendapatkan paket AWS Basic Support gratis. Fungsi dukungan:
+  - Akses 24/7 ke customer service.
+  - Dokumentasi.
+  - Whitepaper.
+  - Forum dukungan.
+  - AWS Trusted Advisor.
+  - AWS Personal Health Dashboard
+- AWS Developer Support. Fitur:
+  - Semua fitur \y ada di Basic.
+  - Layanan diagnostik \p sisi klien.
+  - Panduan praktik terbaik.
+  - Dukungan arsitektur dasar \y terdiri \dr panduan penggunaan penawaran, fitur, & layanan AWS.
+  - Akses email ke customer support \dg waktu respons 24 jam \u segala pertanyaan.
+- AWS Business Support. Fitur:
+  - Semua \y ada di Basic & Developer.
+  - Seluruh rangkaian pemeriksaan AWS Trusted Advisor.
+  - Akses telepon \lsg ke tim dukungan (cloud support engineer) \y memiliki SLA (service level agreement alias jaminan) respons 4 jam jika sistem produksi Anda mengalami gangguan & 1 jam jika sistem Anda down / \t bekerja.
+  - Akses ke Infrastructure Event Management \d biaya tambahan. AWS \dp membantu Anda \u merencanakan acara besar, \spt peluncuran produk baru / periklanan global.
+  - Panduan kasus penggunaan \u mengidentifikasi penawaran, fitur, & layanan AWS \y paling mendukung kebutuhan spesifik Anda.
+  - Dukungan terbatas \u perangkat lunak pihak ketiga, \ct \dl proses instal, konfigurasi, & pemecahan masalah \p sistem operasi pihak ketiga.
+- AWS Enterprise Support. Fitur:
+  - Semua \y ada di Basic, Developer, & Bussiness.
+  - SLA 15 menit.
+  - Panduan arsitektur aplikasi: hubungan konsultatif \y \d mendukung kasus penggunaan & aplikasi spesifik Anda.
+  - Infrastructure Event Management.
+  - Technical Account Manager (TAM) \y akan mengoordinasikan akses ke program & pakar AWS lainnya sesuai kebutuhan. Juga menyediakan infrastructure event management, tinjauan Well-Architected, & reviu operasional.
+- Tinjauan Well-Architected: TAM bekerja sama \dg pelanggan \u meninjau arsitektur menggunakan Well-Architected Framework berdasarkan 5 pilar: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization.
+
+## AWS Marketplace
+
+- AWS Marketplace: katalog digital pilihan \y memiliki ribuan perangkat lunak \dr berbagai vendor.
+- Kategori produk AWS marketplace: Infrastructure Software, Business Applications, Data & Analytics, DevOps, dll.
+
 # Singkatan
 
 - \a: adalah
@@ -383,6 +457,7 @@
 - \hr: harus
 - \jml: jumlah
 - \lb: lebih
+- \lsg: langsung
 - \p: pada
 - \scr: secara
 - \shg: sehingga
