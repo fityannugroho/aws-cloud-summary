@@ -283,10 +283,45 @@
 
 - AWS Organizations: lokasi sentral \y \dp mengelola beberapa akun AWS, \spt mengelola biaya, kontrol akses, compliance (kepatuhan), keamanan, & berbagi sumber daya \dg seluruh akun-akun AWS.
 - Fitur AWS Organizations:
-  - Manajemen terpusat
-  - Consolidated billing (Tagihan terkonsolidasi)
-  - Pengelompokan hierarki akun
-  - Kontrol atas layanan AWS & tindakan API
+  - Manajemen terpusat.
+  - Consolidated billing (Tagihan terkonsolidasi).
+  - Pengelompokan hierarki akun: kelompokkan ke \dlm organiztional unit (OU) \y memiliki tujuan serupa. Terapkan policy (kebijakan) ke OU, maka semua akun akan mewarisi permission \dr policy \tsb.
+  - Kontrol atas layanan AWS & tindakan API.
+
+## Compliance (Kepatuhan)
+
+- AWS telah memenuhi daftar panjang \dr [program compliance](https://aws.amazon.com/compliance/programs).
+- Region \y Anda pilih \dp juga membantu memenuhi regulasi compliance.
+- [AWS Artifact](https://aws.amazon.com/id/artifact): layanan akses on-demand ke laporan keamanan & compliance AWS serta online agreements (perjanjian online) tertentu.
+- AWS Artifact Agreements: \u menandatangani perjanjian \dg AWS terkait penggunaan jenis informasi tertentu di seluruh layanan.
+- AWS Artifact Reports: menyediakan laporan compliance dari auditor pihak ketiga \y menguji & memverifikasi bahwa AWS mematuhi berbagai standar & regulasi keamanan global, regional, & industri.
+- Customer Compliance Center: menyediakan informasi \u mempelajari lebih lanjut tentang compliance. Anda \dp membaca beberapa \ct kasus \y berhubungan \dg compliance \dr para pelanggan AWS \u memberikan gambaran bagaimana perusahaan \dl regulated industry (industri teregulasi) menyelesaikan berbagai tantangan compliance, governance/tata kelola, & audit.
+
+## Serangan Denial-of-Service (DoS)
+
+- Serangan DoS: sengaja \u membuat website / aplikasi menjadi \t bekerja \dg optimal bagi pengguna, \spt mengirimkan traffic jaringan \y masif ke aplikasi.
+- Distributed denial-of-service (DDoS): serangan DoS \y berasal \dr \byk sumber.
+- Tipe-tipe DDoS:
+  - UDP flood: Penyerang mengirim permintaan ke penyedia lain \dg alamat penerima yaitu alamat infrastruktur Anda \shg server akan dibanjiri data \dr penyedia \tsb.
+  - HTTP level attack: Penyerang terlihat \spt pengguna normal, namun mengirim permintaan secara berulang kali & terus-menerus.
+  - Slowloris attack: Penyerang berpura-pura memiliki koneksi \y sangat lambat \shg server \shg \t \dp memproses permintaan pengguna \y lain.
+- Solusi UDP flood: menggunakan security group \y akan menolak permintaan jika memang \t ada di \dl daftar \y diizinkan.
+- Solusi slowloris attack: menggunakan ELB \u mengarahkan traffic lalu lintas ke EC2 instance. \u bisa membanjiri ELB, Anda harus membanjiri keseluruhan AWS Regions \y secara teoritis akan terlalu mahal bagi siapa pun \y melakukannya.
+- AWS Shield: layanan proteksi \dr serangan DDoS.
+- AWS Shield Standard: otomatis melindungi sumber daya AWS \dr jenis serangan DDoS \y paling umum tanpa biaya.
+- AWS Shield Advanced: layanan berbayar \y menyediakan kemampuan \u mendiagnostik, mendeteksi, & memitigasi serangan DDoS \y canggih.
+
+## Layanan Keamanan Tambahan
+
+- Di AWS, enkripsi hadir \dl 2 varian: at rest (saat diam) & in-transit (\dlm perjalanan).
+- Encryption at rest: proses enkripsi saat data \t bergerak. \ct: server-side encryption at rest \u semua data di tabel DynamoDB. Data \y tersimpan akan berubah menjadi serangkaian kata \y \t terbaca.
+- Encryption in-transit: proses enkripsi saat data berpindah antar layanan AWS / pun klien. \ct: menggunakan koneksi (secure sockets layer) SSL.
+- AWS Key Management Service (AWS KMS): layanan \ u melakukan enkripsi menggunakan cryptographic key (kunci kriptografi).
+- Kunci kriptografi: rangkaian angka acak \u mengunci (mengenkripsi) & membuka kunci (mendekripsi) data.
+- AWS WAF (web application firewall): melindungi aplikasi web / API \dr eksploitasi web umum menggunakan web access control list (web ACL), \spt gangguan keamanan, pemakaian sumber daya berlebih, atau gangguan ketersediaan.
+- Web ACL: daftar alamat IP \y diizinkan / diblokir request-nya.
+- Amazon Inspector: meningkatkan keamanan & compliance/kepatuhan aplikasi \dg menjalankan penilaian keamanan secara otomatis.
+- Amazon GuardDuty: layanan \y menyediakan deteksi ancaman cerdas \u infrastruktur & sumber daya AWS. Detail ancaman \y ditemukan \dp ditinjau \dr AWS Management Console.
 
 # Singkatan
 
