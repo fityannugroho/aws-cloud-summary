@@ -323,6 +323,53 @@
 - Amazon Inspector: meningkatkan keamanan & compliance/kepatuhan aplikasi \dg menjalankan penilaian keamanan secara otomatis.
 - Amazon GuardDuty: layanan \y menyediakan deteksi ancaman cerdas \u infrastruktur & sumber daya AWS. Detail ancaman \y ditemukan \dp ditinjau \dr AWS Management Console.
 
+# Pemantauan & Analitik
+
+## Pengantar
+
+- Monitoring / pemantauan: proses mengamati sistem; mengumpulkan metrik; & mengevaluasinya \dr waktu ke waktu \u membuat keputusan / mengambil tindakan.
+- Fungsi pemantauan: mengukur performa sistem; memberi peringatan jika ada \y \t beres, bahkan \dp membantu proses debugging.
+
+## Amazon CloudWatch
+
+- CloudWatch: memantau infrastruktur & aplikasi secara real time. Cara kerja: melacak & memantau metrik.
+- Metrik: variabel \y terikat \d sumber daya Anda, \spt penggunaan CPU \dr EC2 instance.
+- CloudWatch alarm: memberi peringatan jika suatu metrik mencapai batas yang ditentukan, & juga terintegrasi \dg [Amazon SNS](#messaging--queueing).
+- CloudWatch dashboard: panel \y mencantumkan metrik hampir \scr real time.
+- Keuntungan memakai CloudWatch:
+  - Akses ke semua metrik \dr satu lokasi.
+  - Visibilitas ke seluruh aplikasi, infrastruktur, & layanan.
+  - Mengurangi waktu MTTR & mengurangi TCO.
+  - Mengoptimalkan aplikasi & sumber daya operasional.
+- MTTR (mean time to resolution): rata-rata waktu \u menyelesaikan suatu masalah.
+- TCO (total cost of ownership): biaya kepemilikan.
+
+## AWS CloudTrail
+
+- CloudTrail: layanan audit API \y komprehensif; \dp melihat riwayat lengkap \dr aktivitas pengguna & panggilan API \u aplikasi maupun sumber daya.
+- Mesin akan mencatat \dg tepat tentang identitas pemanggil API, waktu panggilan, alamat IP pemanggil, dll.
+- CloudTrail Insights: fitur opsional \y memungkinkan CloudTrail \scr otomatis mendeteksi aktivitas API \y mencurigakan di akun AWS Anda.
+
+## AWS Trusted Advisor
+
+- Trusted Advisor: layanan web \y memeriksa lingkungan AWS Anda & memberikan rekomendasi \scr real time sesuai \dg praktik terbaik AWS.
+- 3 kategori status:
+  - Centang hijau : menunjukkan jumlah item \y terdeteksi tanpa masalah.
+  - Segitiga oranye : mewakili jumlah saran \y mungkin perlu Anda investigasi.
+  - Lingkaran merah : mengindikasikan jumlah rekomendasi \y perlu Anda tindak lanjuti.
+- Trusted Advisor mengevaluasi sumber daya berdasarkan 5 pilar:
+  - Cost optimization (pengoptimalan biaya)
+    - \ct: RDS instances \y \t dipakai; Beberapa EC2 instance \y jarang digunakan; EBS volume \y \t dimanfaatkan.
+    - Solusi: scaling-down instance; menghapus sumber daya yang tidak digunakan.
+  - Performance (kinerja).
+    - \ct: pengiriman konten \u Amazon CloudFront \y \t teroptimasi.
+  - Security (keamanan).
+    - \ct: IAM password policy \y lemah \u user; MFA \t diaktifkan \u root user; security group \y mengizinkan akses publik ke EC2 instance.
+  - Fault tolerance (toleransi terhadap kesalahan)
+    - \ct: EBS volume \y \t memiliki snapshot (backup); EC2 \y \t terdistribusi ke seluruh AZ.
+  - Service limits (batas layanan): memberi peringatan saat Anda mendekati / mencapai batas layanan AWS.
+    - \ct: limit \dr kepemilikan VPC per Region = 5.
+
 # Singkatan
 
 - \a: adalah
