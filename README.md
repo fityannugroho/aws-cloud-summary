@@ -11,29 +11,29 @@
 
 - Amazon EC2 (Elastic Compute Cloud): layanan \u mengakses server virtual AWS.
 - EC2 vs data center on-premise:
-  1. kapasitas fleksibel
-  2. hemat biaya
-  3. cepat
+  - kapasitas fleksibel
+  - hemat biaya
+  - cepat
 - Instance: sebutan \u server virtual di AWS.
 - EC2 berjalan di host (mesin fisik) \d teknologi virtualisasi. 1 host \u banyak instance (virtual machines-VM).
 - Tugas hypervisor:
-  1. membagi sumber daya host \u semua VM.
-  2. mengisolasi antar VM saat berbagi sumber daya.
+  - membagi sumber daya host \u semua VM.
+  - mengisolasi antar VM saat berbagi sumber daya.
 - Konfigurasi instance fleksibel: sistem operasi, instalasi software, ukuran (\d vertical scalling--menambah memori/CPU--), jaringan (jenis request, publik/privat).
 - Cara kerja EC2:
-  1. luncurkan, pilih template \d konfigurasi dasar, lalu atur jaringan & keamanan
-  2. hubungkan, instance \dpt diakses dari desktop, dll.
-  3. gunakan, install software, tambah storage, menyalin file, dll.
+  - luncurkan, pilih template \d konfigurasi dasar, lalu atur jaringan & keamanan
+  - hubungkan, instance \dpt diakses dari desktop, dll.
+  - gunakan, install software, tambah storage, menyalin file, dll.
 
 ## Tipe Instance EC2
 
 - Setiap tipe instance dikelompokkan dalam satu instance family \u tugas tertentu.
 - Instance family:
-  1. General purpose instances, seimbang antara sumber daya komputasi, memori, & jaringan. Bisa \sbg server apk web / code repo.
-  2. Compute optimized instances, ideal \u komputasi tinggi \dgn performa prosesor tinggi, \sprt: server game, HPC (high performance computing), / pemodelan ilmiah. Bisa \u beban kerja batch processing.
-  3. Memory optimized instances, \u beban kerja memproses kumpulan data besar di memori, \sprt relasional & non-relasional / HPC.
-  4. Accelerated computing instances, \u menjalankan beberapa fungsi \lbh efisien \drpd software \yg berjalan di CPU, \cth kalkulasi floating-point, pemrosesan grafik, & data pattern matching.
-  5. Storage optimized instance, \u beban kerja membaca (read) & menulis (write) tinggi & berurutan \dr database besar di local storage. Bisa \u sistem file terdistribusi, data warehouse (gudang data), online transaction processing system. Cocok jika butuh input/output operation per second (IOPS) tinggi.
+  - General purpose instances, seimbang antara sumber daya komputasi, memori, & jaringan. Bisa \sbg server apk web / code repo.
+  - Compute optimized instances, ideal \u komputasi tinggi \dgn performa prosesor tinggi, \sprt: server game, HPC (high performance computing), / pemodelan ilmiah. Bisa \u beban kerja batch processing.
+  - Memory optimized instances, \u beban kerja memproses kumpulan data besar di memori, \sprt relasional & non-relasional / HPC.
+  - Accelerated computing instances, \u menjalankan beberapa fungsi \lbh efisien \drpd software \yg berjalan di CPU, \cth kalkulasi floating-point, pemrosesan grafik, & data pattern matching.
+  - Storage optimized instance, \u beban kerja membaca (read) & menulis (write) tinggi & berurutan \dr database besar di local storage. Bisa \u sistem file terdistribusi, data warehouse (gudang data), online transaction processing system. Cocok jika butuh input/output operation per second (IOPS) tinggi.
 
 ## Harga EC2
 
@@ -78,9 +78,9 @@
 ## Layanan Komputasi Tambahan
 
 - Pengguna EC2 bertanggung jawab \u:
-  1. patching (memperbaiki masalah \d memperbarui program komputer).
-  2. menyiapkan scaling.
-  3. merancang aplikasi \u dijalankan agar high available.
+  - patching (memperbaiki masalah \d memperbarui program komputer).
+  - menyiapkan scaling.
+  - merancang aplikasi \u dijalankan agar high available.
 - Serverless: pengguna \tdk \dpt melihat & mengakses infrastruktur dasar \yg menjalankan aplikasi. Semua pengelolaan lingkungan \yg mendasari penyediaan, scaling, high availability, & pemeliharaan sudah ditangani \shg pengguna bisa fokus \pd aplikasi \yg akan dijalankan.
 - AWS lambda: layanan serverless AWS.
 - AWS Lambda dirancang \u menjalankan kode di bawah 15 menit \shg tdk cocok \u proses \yg berjalan lama \sprt deep learning.
@@ -88,7 +88,7 @@
 -  Amazon Elastic Container Service (Amazon ECS) & Amazon Elastic Kubernetes Service (Amazon EKS). Keduanya adalah container orchestration.
 - Container menyediakan cara \u mengemas kode, konfigurasi, & dependensi aplikasi ke dalam satu objek.
 - Container bekerja di atas EC2 instance & berjalan secara terpisah satu sama lain. Cara kerja container serupa \dgn mesin virtual, namun \dlm kasus ini, host-nya (server) adalah EC2 instance.
-- ECS & EKS berjalan di atas EC2. Jika tak ingin sibuk mengurusi EC2, gunakan AWS Fargate.
+- ECS & EKS berjalan di atas EC- Jika tak ingin sibuk mengurusi EC2, gunakan AWS Fargate.
 - AWS Fargate: platform komputasi serverless \u ECS & EKS.
 
 # 3. Infrastruktur Global & Keandalan
@@ -103,10 +103,10 @@
 - AWS Regions memiliki beberapa data center \yg berisi semua sumber daya \yg dibutuhkan \sprt komputasi, penyimpanan, jaringan, dll.
 - Setiap Region terkoneksi \dgn region lain melalui high speed fiber network, & juga terisolasi \dr region lain kecuali Anda memberinya izin.
 - 4 faktor bisnis \yg menentukan pemilihan suatu Region:
-  1. Compliance (kepatuhan): mengikuti standar \yg ditetapkan pemerintah.
-  2. Proximity (Kedekatan): latensi (waktu \u mengirim & menerima data) bisa semakin kecil & pengiriman konten ke pelanggan jadi lebih cepat.
-  3. Feature Availability (Ketersediaan Fitur): Region terdekat mungkin \tdk memiliki semua fitur AWS dibutuhkan.
-  4. Pricing (Harga): beberapa lokasi bisa lebih mahal pengoperasiannya.
+  - Compliance (kepatuhan): mengikuti standar \yg ditetapkan pemerintah.
+  - Proximity (Kedekatan): latensi (waktu \u mengirim & menerima data) bisa semakin kecil & pengiriman konten ke pelanggan jadi lebih cepat.
+  - Feature Availability (Ketersediaan Fitur): Region terdekat mungkin \tdk memiliki semua fitur AWS dibutuhkan.
+  - Pricing (Harga): beberapa lokasi bisa lebih mahal pengoperasiannya.
 - Availability Zone (AZ): 1 atau sekelompok data center \dlm 1 region.
 - Setiap Regions terdiri dari beberapa AZ \yg terisolasi & secara fisik terpisah di dalam Region geografis.
 - EC2 menjalankan VM \pd hardware \yg ada di AZ. Best practice-nya, jalankan setidaknya 2 AZ \dlm 1 Region.
@@ -123,20 +123,20 @@
 
 - Di AWS semua aktivitas adalah panggilan API.
 - AWS Management Console: antarmuka berbasis browser \yg \dpt digunakan \u mengakses & mengelola layanan AWS. Fungsi:
-  1. mencari layanan AWS \dr nama, kata kunci, / akronim.
-  2. membangun lingkungan pengujian.
-  3. melihat tagihan AWS.
-  4. melakukan pemantauan.
-  5. bekerja \d sumber daya non-teknis lainnya.
+  - mencari layanan AWS \dr nama, kata kunci, / akronim.
+  - membangun lingkungan pengujian.
+  - melihat tagihan AWS.
+  - melakukan pemantauan.
+  - bekerja \d sumber daya non-teknis lainnya.
 - AWS Command Line Interface (CLI): mengendalikan layanan AWS \d baris perintah melalui satu alat, juga \dpt menjalankan skrip \tsb secara otomatis.
 - AWS Software Development Kit (SDK): \u berinteraksi \d sumber daya AWS melalui berbagai bahasa pemrograman, & memudahkan developer \u membuat program di AWS tanpa menggunakan low-level API.
 - Low-level API: memungkinkan Anda \u memanipulasi fungsi di \dlm API secara terperinci sesuai \d kebutuhan.
 - high-level API: memberikan lebih banyak fungsi \dlm 1 perintah & lebih mudah digunakan.
-- AWS Elastic Beanstalk: membantu menyediakan lingkungan berbasis Amazon EC2. Cukup unggah kode & tentukan konfigurasi \yg diinginkan, maka pembangunan lingkungan \sprt penyesuaian kapasitas, load balancing, auto-scaling, & pemantauan kesehatan aplikasi akan otomatis dikerjakan.
+- AWS Elastic Beanstalk: membantu menyediakan lingkungan berbasis Amazon EC- Cukup unggah kode & tentukan konfigurasi \yg diinginkan, maka pembangunan lingkungan \sprt penyesuaian kapasitas, load balancing, auto-scaling, & pemantauan kesehatan aplikasi akan otomatis dikerjakan.
 - AWS CloudFormation: layanan infrastructure as code (IaaS, infrastruktur sebagai kode) \u menentukan berbagai sumber daya AWS \d cara deklaratif menggunakan CloudFormation template (dokumen berbasis JSON / YAML).
 - CloudFormation template\dpt dijalankan di beberapa akun / region.
 
-# Jaringan
+# 4. Jaringan
 
 ## Pengantar
 
@@ -169,7 +169,7 @@
 - Route 53 juga \dpt mengarahkan traffic ke endpoints (titik akhir) \yg berbeda menggunakan beberapa routing policies, \sprt Geolocation DNS.
 - Geolocation DNS: mengarahkan traffic berdasarkan lokasi pelanggan.
 
-# 4. Penyimpanan & Database
+# 5. Penyimpanan & Database
 
 ## Instance Store & Amazon Elastic Block Store (EBS)
 
@@ -194,14 +194,14 @@
 - S3 juga ada fitur versioning.
 - Saat mengubah file di object-level storage, maka seluruh objek akan diperbarui.
 - S3 storage class:
-  1. S3 standard: objek \yg disimpan akan memiliki 99,999999999% probabilitas tetap utuh \stlh jangka waktu 1 tahun. Data disimpan minimal di 3 AZ.
-  2. S3 Standard-Infrequent Access (S3 Standard-IA): digunakan \u data \yg jarang diakses tapi membutuhkan proses cepat saat dibutuhkan. \cth \u menyimpan backup.
-  3. S3 One Zone-Infrequent Access (S3 One Zone-IA): Data disimpan hanya di 1 AZ.
-  4. S3 Intelligent-Tiering: S3 memantau pola akses objek. Jika objek \tdk diakses selama 30 hari berturut-turut, S3 akan otomatis memindahkannya dari S3 Standard ke S3 Standard-IA. Jika objek kembali diakses, maka S3 akan otomatis mengembalikannya ke S3 standard.
-  5. S3 Glacier: ideal \u data audit. Mengaksesnya perlu waktu beberapa menit hingga jam.
-  6. S3 Glacier Deep Archive: memiliki biaya terendah & ideal untuk pengarsipan. Mengaksesnya perlu waktu 12 hingga 48 jam.
+  - S3 standard: objek \yg disimpan akan memiliki 99,999999999% probabilitas tetap utuh \stlh jangka waktu 1 tahun. Data disimpan minimal di 3 AZ.
+  - S3 Standard-Infrequent Access (S3 Standard-IA): digunakan \u data \yg jarang diakses tapi membutuhkan proses cepat saat dibutuhkan. \cth \u menyimpan backup.
+  - S3 One Zone-Infrequent Access (S3 One Zone-IA): Data disimpan hanya di 1 AZ.
+  - S3 Intelligent-Tiering: S3 memantau pola akses objek. Jika objek \tdk diakses selama 30 hari berturut-turut, S3 akan otomatis memindahkannya dari S3 Standard ke S3 Standard-IA. Jika objek kembali diakses, maka S3 akan otomatis mengembalikannya ke S3 standard.
+  - S3 Glacier: ideal \u data audit. Mengaksesnya perlu waktu beberapa menit hingga jam.
+  - S3 Glacier Deep Archive: memiliki biaya terendah & ideal untuk pengarsipan. Mengaksesnya perlu waktu 12 hingga 48 jam.
 - S3 Lifecycle policies: kebijakan \u memindahkan data secara otomatis antar storage class (kelas penyimpanan).
-- Jika Anda memiliki objek / file \yg lengkap & hanya membutuhkan sesekali perubahan, maka pilihlah S3. Namun, jika Anda membutuhkan proses read (baca) data \yg kompleks, maka pilihlah EBS.
+- Jika Anda memiliki objek / file \yg lengkap & hanya membutuhkan sesekali perubahan, maka pilihlah S- Namun, jika Anda membutuhkan proses read (baca) data \yg kompleks, maka pilihlah EBS.
 
 ## Amazon Elastic File System (Amazon EFS)
 
@@ -216,13 +216,13 @@
 - RDS: layanan \u menjalankan database relasional di AWS Cloud. Mendukung: Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle DB, & Microsoft SQL Server.
 - Lift-and-Shift: proses memigrasikan beban kerja \dr on-premise ke AWS \d sedikit / bahkan tanpa modifikasi.
 - Layanan Amazon RDS hadir \d berbagai fitur, termasuk:
-  1. Automated patching (memperbaiki masalah \d memperbarui program).
-  2. Backup (pencadangan).
-  3. Redundancy (memiliki lebih \dr 1 instance \u berjaga-jaga jika instance utama gagal beroperasi).
-  4. Failover (instance lain akan mengambil alih saat instance utama mengalami kegagalan).
-  5. Disaster recovery (memulihkan pascabencana).
-  6. Encryption at rest (enkripsi data saat disimpan).
-  7. Encryption in-transit (enkripsi data saat sedang dikirim & diterima).
+  - Automated patching (memperbaiki masalah \d memperbarui program).
+  - Backup (pencadangan).
+  - Redundancy (memiliki lebih \dr 1 instance \u berjaga-jaga jika instance utama gagal beroperasi).
+  - Failover (instance lain akan mengambil alih saat instance utama mengalami kegagalan).
+  - Disaster recovery (memulihkan pascabencana).
+  - Encryption at rest (enkripsi data saat disimpan).
+  - Encryption in-transit (enkripsi data saat sedang dikirim & diterima).
 
 ## Amazon DynamoDB
 
@@ -238,9 +238,9 @@
 
 - AWS DMS: \dpt memigrasikan database baik relasional, nonrelasional, / tipe penyimpanan data lain ke AWS \d mudah & aman.
 - \d AWS DMS :
-  1. Database sumber tetap beroperasi penuh selama proses migrasi.
-  2. Downtime (waktu henti) diminimalkan \u aplikasi \yg bergantung \pd database \tsb.
-  3. Database sumber & target \tdk harus bertipe sama (heterogeneous database migration).
+  - Database sumber tetap beroperasi penuh selama proses migrasi.
+  - Downtime (waktu henti) diminimalkan \u aplikasi \yg bergantung \pd database \tsb.
+  - Database sumber & target \tdk harus bertipe sama (heterogeneous database migration).
 - AWS Schema Conversion Tool: \u heterogeneous database migration.
 - Amazon DocumentDB: layanan \u menangani manajemen konten, katalog, / pun profil pengguna, layanan database dokumen \yg mendukung beban kerja MongoDB.
 - Amazon Neptune: layanan graph database \u membuat & menjalankan aplikasi \dgn kumpulan data \yg sangat terhubung, \sprt social networking, recommendation engines, fraud detection (sistem pendeteksi penipuan), & knowledge graph.
@@ -252,20 +252,20 @@
 - Amazon ElastiCache: menambahkan lapisan cache \pd database \yg \dpt meningkatkan read time (waktu baca) \u permintaan umum, mendukung Redis & Memcached.
 - Amazon DynamoDB Accelerator (DAX): native caching layer \yg akan meningkatkan waktu read (baca) \u data nonrelasional.
 
-# Keamanan
+# 6. Keamanan
 
 ## Shared Responsibility Model
 
 - Shared responsibility model:
-  1. AWS mengontrol security **of** the cloud (keamanan dari cloud).
-  2. Pelanggan mengontrol security **in** the cloud (keamanan di cloud).
+  - AWS mengontrol security **of** the cloud (keamanan dari cloud).
+  - Pelanggan mengontrol security **in** the cloud (keamanan di cloud).
 - Tanggung jawab AWS:
-  1. Physical: berbagai komponen keamanan fisik, \sprt gedung, sumber daya listrik, instalasi jaringan, sistem pendingin, penjagaan keamanan, dll.
-  2. Network & Hypervisor: AWS memiliki banyak auditor pihak ketiga \yg memperhatikan & mengawasi bagaimana infrastruktur AWS dibangun.
+  - Physical: berbagai komponen keamanan fisik, \sprt gedung, sumber daya listrik, instalasi jaringan, sistem pendingin, penjagaan keamanan, dll.
+  - Network & Hypervisor: AWS memiliki banyak auditor pihak ketiga \yg memperhatikan & mengawasi bagaimana infrastruktur AWS dibangun.
 - Tanggung jawab pengguna:
-  1. Operating System: memilih sistem operasi, melakukan patching, dll.
-  2. Application
-  3. Data: Anda bisa membuat data \dpt diakses oleh semua orang, beberapa orang, 1 orang \d kondisi tertentu, / bahkan benar-benar menguncinya.
+  - Operating System: memilih sistem operasi, melakukan patching, dll.
+  - Application
+  - Data: Anda bisa membuat data \dpt diakses oleh semua orang, beberapa orang, 1 orang \d kondisi tertentu, / bahkan benar-benar menguncinya.
 
 ## Perizinan & Hak Akses Pengguna
 
@@ -283,7 +283,7 @@
 
 - AWS Organizations: lokasi sentral \yg \dpt mengelola beberapa akun AWS, \sprt mengelola biaya, kontrol akses, compliance (kepatuhan), keamanan, & berbagi sumber daya \d seluruh akun-akun AWS.
 - Fitur AWS Organizations:
-  1. Manajemen terpusat
-  2. Consolidated billing (Tagihan terkonsolidasi)
-  3. Pengelompokan hierarki akun
-  4. Kontrol atas layanan AWS & tindakan API
+  - Manajemen terpusat
+  - Consolidated billing (Tagihan terkonsolidasi)
+  - Pengelompokan hierarki akun
+  - Kontrol atas layanan AWS & tindakan API
