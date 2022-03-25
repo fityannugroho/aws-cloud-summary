@@ -187,7 +187,7 @@
 
 ## Amazon Simple Storage Service (S3)
 
-- S3: layanan \u menyimpan & mengambil data \dl bentuk onjek \dg \jml \t terbatas. Objek \tsb disimpan \dl bucket. Bucket \dp diatur hak aksesnya.
+- S3: layanan \u menyimpan & mengambil data \dl bentuk objek \dg \jml \t terbatas. Objek \tsb disimpan \dl bucket. Bucket \dp diatur hak aksesnya.
 - Setiap objek terdiri \dr data, metadata, & kunci. Setiap objek maks. berukuran 5 TB.
 - Metadata: informasi mengenai data, cara penggunaan, ukurannya, \dll.
 - Kunci (key): identifier/pengenal \y unik.
